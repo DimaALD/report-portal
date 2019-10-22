@@ -1,0 +1,176 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Log in to Report Portal",
+    "line": 1,
+    "id": "log-in-to-report-portal",
+    "tags": [],
+    "uri": "features/smoke/checkLoginToRp copy.feature",
+    "elements": [
+      {
+        "id": "log-in-to-report-portal;login-to-rp-portal-as-admin",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Login to RP portal as admin",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          },
+          {
+            "name": "@MY",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Log in to RP as \"admin\"",
+            "match": {
+              "location": "steps/login.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2578000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "Switch to \"Filters\" dashboard",
+            "match": {
+              "location": "steps/common.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 910000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Click to \"SETTINGS\" icon on header",
+            "match": {
+              "location": "steps/common.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Log out",
+            "match": {
+              "location": "steps/login.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 448000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "log-in-to-report-portal;login-to-rp-portal-as-user",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Login to RP portal as user",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          },
+          {
+            "name": "@MY",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Log in to RP as \"user\"",
+            "match": {
+              "location": "steps/login.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1780000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "Switch to \"Filters\" dashboard",
+            "match": {
+              "location": "steps/common.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 932000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Click to \"SETTINGS\" icon on header",
+            "match": {
+              "location": "steps/common.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 338000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Log out",
+            "match": {
+              "location": "steps/login.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

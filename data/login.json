@@ -1,0 +1,12 @@
+{
+    "data": {
+        "admin": {
+            "login":"superadmin",
+            "password":"erebus"
+        },
+        "user": {
+            "login":"default",
+            "password":"1q2w3e"
+        }
+    }
+}

@@ -1,22 +1,18 @@
-const {Before, After} = require('cucumber');
+const {Before, After, AfterAll} = require('cucumber');
 const {browser} = require('protractor');
-const logOut = new (require('../page_objects/pages/header'))().logOut;
-
-Before(function() {
-});
+const header = require('../page_objects/pages/header');
 
 
 After(function() {
   console.log('Entering logout');
-  return logOut();
+  new header().logOut()
 });
 
-After(function(testCase) {
-  if (testCase.results.status === Status.FAILED) {
+After(async function(testCase) {
+  if (testCase.result.status === 'failed') {
     const world = this;
-    browser.takeScreenshot().then((buffer) => {
+    await browser.takeScreenshot().then((buffer) => {
       return world.attach(buffer, 'image/png');
     });
   }
 });
-

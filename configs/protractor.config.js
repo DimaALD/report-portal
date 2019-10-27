@@ -29,7 +29,7 @@ exports.config = {
 
   // cucumber options
   cucumberOpts: {
-    require: [path.resolve('./steps/*.js'), path.resolve('./support/world.js')],
+    require: [path.resolve('./steps/*.js'), path.resolve('./support/*.js')],
     tags: yargs.tags || '@smoke',
     format: ['json:./reports/results.json', './node_modules/cucumber-pretty'],
   },

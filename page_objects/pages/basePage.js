@@ -6,10 +6,11 @@ const dropdown_helper = require('../../helpers/dropdownHelper');
 
 class BasePage {
   constructor() {
+    this.ELEMENT_ON_SIDE_BAR = '//a[.//*[text()="{0}"]]';
   }
 
   async switchToElementOnSidebar(name) {
-    const item = element(by.xpath(format('//a[.//*[text()="{0}"]]', name)));
+    const item = element(by.xpath(this.format(this.ELEMENT_ON_SIDE_BAR, name)));
     return await this.clickOnElement(item);
   }
 

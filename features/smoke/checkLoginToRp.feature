@@ -5,9 +5,10 @@ Feature: Log in to Report Portal
    When Log in to RP as "<user>"
    And  Switch to "Filters" dashboard
    And  Click to "SETTINGS" icon on header
-   When Log out
+   And  Click to "Notifications" tab
+   
    
    Examples:
    | user |
    | admin|
-   | user |
+  # | user |

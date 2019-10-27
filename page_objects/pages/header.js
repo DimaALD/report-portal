@@ -19,9 +19,9 @@ class Header extends BasePage {
 
     return this.clickOnElement(element(iconMap.get(icon)));
   }
-
+  
   async logOut() {
-    return await this.selectOptionInDropdown(this.userDropdown, "Logout");
+   return await this.selectOptionInDrodpown(this.userDropdown, "Logout")
   }
 }
 

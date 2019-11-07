@@ -1,10 +1,10 @@
-const {Before, After, AfterAll} = require('cucumber');
+const {After} = require('cucumber');
 const {browser} = require('protractor');
 const header = require('../page_objects/pages/header');
 
 
 After(function() {
-  console.log('Entering logout');
+//  logger
   new header().logOut()
 });
 

@@ -2,7 +2,7 @@ const {ExpectedConditions, browser} = require('protractor');
 
 class ElementHelper {
   constructor() {
-
+    
   }
 
   static waitForCondition(element, condition) {

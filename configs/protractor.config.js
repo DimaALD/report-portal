@@ -38,4 +38,7 @@ exports.config = {
     browser.waitForAngularEnabled(false);
     browser.manage().window().maximize();
   },
+  afterLaunch: function() {
+    
+  }
 };

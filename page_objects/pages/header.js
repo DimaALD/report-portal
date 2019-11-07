@@ -5,9 +5,6 @@ class Header extends BasePage {
     super();
     this.topSection = element(by.css('section.header.js-header'));
     this.userDropdown = element(by.xpath('//ul[.//a[@data-js-user-dropdown]]'));
-    this.settingsIcon = element(by.css('#settings a'));
-    this.membersIcon = element(by.css('#members a'));
-    this.logoIcon = element(by.css('a.logo'));
   }
 
   async switchToElementOnHeader(icon) {

@@ -6,12 +6,12 @@ class DropdownHelper {
     this.ELEMENT_IN_DROPDOWN = './/*[./*[contains(text(), "{0}")]]';
   }
 
-  async selectOptionInDropdown(dropdownToggle, text) {
-    const elementInDropdown = dropdownToggle.element(by.xpath(format(this.ELEMENT_IN_DROPDOWN, text)));
+  async static selectOptionInDropdown(dropdownToggle, text) {
+    const elementInDropdown = dropdownToggle.element(by.xpath(helper.format(this.ELEMENT_IN_DROPDOWN, text)));
     await helper.waitAndClick(dropdownToggle);
     return await helper.waitAndClick(elementInDropdown);
   }
 }
 
 
-module.exports = new DropdownHelper();
+module.exports = DropdownHelper;

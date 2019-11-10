@@ -1,30 +1,17 @@
-const {ExpectedConditions, browser} = require('protractor');
+const {browser, Key} = require('protractor'),
+  waiter = require('./waiter'),
+  format = require('string-format');
 
 class ElementHelper {
-  constructor() {
-    
+  constructor() {};
+
+  static async waitAndClick(element) {
+    await waiter.waitForCondition(element, 'VISIBLE')
+    return await element.click();
   }
 
-  static waitForCondition(element, condition) {
-    const conditionsMap = new Map([
-      ['VISIBLE', 'visibilityOf'],
-      ['INVISIBLE', 'invisibilityOf'],
-      ['PRESENCE', 'presenceOf'],
-      ['STALENESS', 'stalenessOf'],
-      ['CLICKABLE', 'elementToBeClickable'],
-    ]);
-    const conditionName = conditionsMap.has(condition) ? conditionsMap.get(condition) : 'visibilityOf';
-    return browser.wait(ExpectedConditions[conditionName](element));
-  }
-
-  static waitAndClick(element) {
-    return this.waitForCondition(element, 'VISIBLE').then(() => {
-      return element.click();
-    });
-  }
-
-  static waitAndSendKeys(element, value) {
-    return this.waitForCondition(element, 'VISIBLE').then(() => {
+  static async waitAndSendKeys(element, value) {
+    await waiter.waitForCondition(element, 'VISIBLE').then(() => {
       return element.sendKeys(value);
     });
   }
@@ -37,6 +24,28 @@ class ElementHelper {
     return browser.executeScript('return arguments[0].scrollIntoView({"block": "center", "inline": "center"})', element);
   }
 
+  static javascriptInputInTextArea(element, text) {
+    return browser.executeScript(`return arguments[0].value = ${text}`, element);
+  }
+
+  static async dragAndDrop(element1, element2) {
+    await  waiter.waitForCondition(element1);
+    await  waiter.waitForCondition(element2);
+    return browser.actions().dragAndDrop(element1, element2).perform();
+  }
+
+  static async mouseMove(element) {
+    await waiter.waitForCondition(element);
+    return browser.actions().mouseMove(element).perform();
+  }
+
+  static resize(element, x, y) {
+    
+  }
+
+  static format(baseString, parameters) {
+    return Array.isArray(parameters) ? format(baseString, ...parameters) : format(baseString, parameters);
+  }
 }
 
 

@@ -1,4 +1,3 @@
-const {by, browser, $, $$} = require('protractor');
 const helper = require('../../helpers/elementHelper');
 const login = require('../../data/login.json');
 
@@ -14,6 +13,7 @@ class LoginPage {
     await helper.waitAndSendKeys(this.login, login.data[userName].login);
     await helper.waitAndSendKeys(this.password, login.data[userName].password);
     await helper.waitAndClick(this.loginButton);
+    await browser.sleep(10000)
   }
 }
 

@@ -11,9 +11,8 @@ class ElementHelper {
   }
 
   static async waitAndSendKeys(element, value) {
-    await waiter.waitForCondition(element, 'VISIBLE').then(() => {
-      return element.sendKeys(value);
-    });
+      await waiter.waitForCondition(element, 'VISIBLE')
+      return await element.sendKeys(value);
   }
 
   static javascriptClick(element) {

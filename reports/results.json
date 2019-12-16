@@ -34,7 +34,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1845000000
+              "duration": 11273000000
             }
           },
           {
@@ -47,7 +47,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 750000000
+              "duration": 348000000
             }
           },
           {
@@ -60,7 +60,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 277000000
+              "duration": 752000000
             }
           },
           {
@@ -73,17 +73,18 @@
             },
             "result": {
               "status": "passed",
-              "duration": 198000000
+              "duration": 296000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "support/hooks.js:11"
+              "location": "support/hooks.js:10"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 5000000
             }
           },
           {
@@ -93,15 +94,14 @@
               "location": "support/hooks.js:6"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "passed"
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
             },
             "result": {
               "status": "passed",

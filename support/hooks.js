@@ -4,8 +4,7 @@ const header = require('../page_objects/pages/header');
 
 
 After(function() {
-//  logger
-  new header().logOut()
+  new header().logOut();
 });
 
 After(async function(testCase) {

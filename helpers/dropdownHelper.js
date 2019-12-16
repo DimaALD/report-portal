@@ -6,7 +6,7 @@ class DropdownHelper {
     this.ELEMENT_IN_DROPDOWN = './/*[./*[contains(text(), "{0}")]]';
   }
 
-  async static selectOptionInDropdown(dropdownToggle, text) {
+   static async selectOptionInDropdown(dropdownToggle, text) {
     const elementInDropdown = dropdownToggle.element(by.xpath(helper.format(this.ELEMENT_IN_DROPDOWN, text)));
     await helper.waitAndClick(dropdownToggle);
     return await helper.waitAndClick(elementInDropdown);

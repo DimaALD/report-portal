@@ -28,5 +28,12 @@ class Waiter {
     static wait(seconds = 2000) {
         return browser.sleep(seconds);
     }
+
+    static waitForPageLoad() {
+      return browser.wait(() => {
+        return browser.executeScript('return document.readyState').then(readyState => {
+            return readyState === 'complete';
+        })}, 8000);
+    }
 }
 module.exports = Waiter;

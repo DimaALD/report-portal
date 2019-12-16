@@ -1,4 +1,5 @@
 const BasePage = require('./basePage');
+const helper = require('../../helpers/elementHelper');
 
 class SettingsPage extends BasePage {
   constructor() {
@@ -7,8 +8,8 @@ class SettingsPage extends BasePage {
   }
 
   async switchToTab(tabName) {
-    const tab = element(by.xpath(this.format(this.TAB_LOCATOR, tabName)));
-    return await this.clickOnElement(tab);
+    const tab = element(by.xpath(helper.format(this.TAB_LOCATOR, tabName)));
+    return await helper.waitAndClick(tab);
   }
 
 }

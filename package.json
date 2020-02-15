@@ -25,7 +25,7 @@
     "string-format": "^2.0.0",
     "winston": "^3.2.1",
     "yargs": "^13.3.0",
-    "yarn": "^1.19.1"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
